@@ -1,47 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import Task from './Task';
-import { addTask, getAllTasks } from './db';
+// App.js
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LoginPage from './LoginPage'; // Import your login page
+import DashboardPage from './DashboardPage'; // Import your dashboard page
+import CompletedTasksPage from './CompletedTasksPage'; // Import your completed tasks page
+import RegistrationPage from './RegistrationPage';
 
 const App = () => {
-  const [tasks, setTasks] = useState([]);
-  const [newTask, setNewTask] = useState('');
-
-  const fetchTasks = async () => {
-    const allTasks = await getAllTasks();
-    setTasks(allTasks);
-  };
-
-  useEffect(() => {
-    fetchTasks();
-  }, []);
-
-  const handleAddTask = async () => {
-    if (newTask.trim() !== '') {
-      const task = { title: newTask };
-      await addTask(task);
-      setNewTask('');
-      fetchTasks();
-    }
-  };
-
   return (
-    <div>
-      <h1>Task App</h1>
-      <div>
-        <input
-          type="text"
-          value={newTask}
-          onChange={(e) => setNewTask(e.target.value)}
-        />
-        <button onClick={handleAddTask}>Add Task</button>
-      </div>
-      <div>
-        {tasks.map((task) => (
-          <Task key={task.id} task={task} />
-        ))}
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage/>} />
+        <Route path="/login" element={<LoginPage/>} />
+        <Route path="/register" element={<RegistrationPage/>} />
+        <Route path="/dashboard" element={<DashboardPage/>} />
+        <Route path="/completed-tasks" element={<CompletedTasksPage/>} />
+       
+      </Routes>
+    </Router>
   );
 };
+
+
 
 export default App;

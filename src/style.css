@@ -1,0 +1,113 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+  }
+  
+  
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 16px;
+  }
+
+  .logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+
+  .task-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .task-card h3 {
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .task-card p {
+    margin-bottom: 4px;
+  }
+  
+  .task-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .task-actions label {
+    margin-right: 16px;
+  }
+  
+  .task-actions button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .task-actions button:hover {
+    background-color: #c82333;
+  }
+
+  .center {
+    text-align: center;
+    padding: 20px;;
+  }
+  
