@@ -40,7 +40,7 @@ const CompletedTasksPage = () => {
     return (
         <div className='container'>
             <div className="logo-container ">
-                <img alt="logo" src="/tasks.png" width="120px" className='logo' />
+                <img alt="logo" src="/logotick.png" width="120px" className='logo' />
             </div>
             <div className="welcome">
                 <h2>Welcome {userName}</h2>
@@ -51,7 +51,7 @@ const CompletedTasksPage = () => {
             </div>
             {/* Render your completed Task components here */}
             {completedTasks.map((task) => (
-                <Task key={task.id} task={task} />
+                <Task key={task.id} task={task} userName={userName} />
             ))}
         </div>
     );

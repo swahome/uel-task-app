@@ -1,6 +1,6 @@
 import { openDB } from 'idb';
 
-const dbName = 'taskDB';
+const dbName = 'taskAppDB';
 const storeName = 'tasks';
 
 const dbPromise = openDB(dbName, 1, {

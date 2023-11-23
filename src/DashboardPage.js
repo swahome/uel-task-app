@@ -54,10 +54,10 @@ const DashboardPage = () => {
     return (
         <div className='container'>
             <div className="logo-container ">
-                <img alt="logo" src="/tasks.png" width="120px" className='logo' />
+                <img alt="logo" src="/logotick.png" width="120px" className='logo' />
             </div>
-            <div className="welcome">
-                <h2>Welcome {userName} <Logout /></h2>
+            <div className="welcome center">
+                <p>Welcome {userName} <Logout /></p>
             </div>
             <h2>Dashboard</h2>
             {/* link to completed tasks */}

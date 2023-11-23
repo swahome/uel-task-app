@@ -34,11 +34,12 @@ const AddTaskForm = ({ onAddTask }) => {
         <label>Title:</label>
         <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
 
-        <label>Deadline Date:</label>
+        <label>Due Date:</label>
         <input type="date" value={deadlineDate} onChange={(e) => setDeadlineDate(e.target.value)} />
 
         <label>Description:</label>
-        <textarea value={description} onChange={(e) => setDescription(e.target.value)} />
+        <textarea rows={5} value={description} onChange={(e) => setDescription(e.target.value)} />
+        <p>&nbsp;</p>
 
         <button type="button" onClick={handleAddTask}>
           Add Task
